@@ -96,12 +96,15 @@
     <hr>
     
     <h2>Experiments</h2>
-    <h3>Experiment 1: Image</h3>
-    <p>The generator network \(p_\theta\) in our framework is well-learned to generate samples that are realistic and share visual similarities as the training data. The qualitative results are shown in Figure 1. We further evaluate our model quantitatively by using Fréchet Inception Distance (FID) in the table below. It can be seen that our model achieves superior generation performance compared to listed baseline models.</p>
+    <h3>Experiment 1: MNIST-SVHN: Digit Coherence</h3>
+    <p>Our proposed multimodal generative model with EBM prior generate image with highly consistant digit information both in clean and noisy background. The qualitative results are shown in Figure 1. We further evaluate our model quantitatively by using Joint Coherence and Cross Coherence in the table below. It can be seen that our model achieves superior generation performance compared to listed baseline models.</p>
     <div class="figure">
-        <img src="./figure/image/svhn/synthesis/synthesis_latent_ebm.png" width="200" style="margin:10px">
-        <img src="./figure/image/cifar10/synthesis/cifar10_syn.png" width="200" style="margin:10px">
-        <img src="./figure/image/celeba/synthesis/celeba_latent_ebm_synthesis.png" width="200" style="margin:10px">
+        <img src="./fig/image/MS_gen_samples_ebm_0_122.png" width="200" style="margin:10px">
+        <img src="./fig/image/MS_gen_samples_ebm_1_122.png" width="200" style="margin:10px">
+        <img src="./fig/image/MS_gen_samples_ebm_0_124.png" width="200" style="margin:10px">
+        <img src="./fig/image/MS_gen_samples_ebm_1_124.png" width="200" style="margin:10px">
+        <img src="./fig/image/MS_gen_samples_ebm_0_127.png" width="200" style="margin:10px">
+        <img src="./fig/image/MS_gen_samples_ebm_1_127.png" width="200" style="margin:10px">
         <p class="caption"><b>Figure 1:</b> Generated samples for SVHN \((32 \times 32)\), CIFAR-10 \((32 \times 32)\), and CelebA \((64 \times 64)\).</p>
     </div>
 
@@ -111,14 +114,14 @@
     </div>
 
 
-    <h3>Experiment 2: Text</h3>
+    <h3>Experiment 2: PolyMNIST: Digit Coherence</h3>
     <p> To evaluate the quality of the generated samples, we recruit Forward Perplexity (FPPL) and Reverse Perplexity (RPPL). FPPL is the perplexity of the generated samples evaluated under a language model trained with real data and measures the fluency of the synthesized sentences. RPPL is the perplexity of real data (the test data partition) computed under a language model trained with the model-generated samples. Prior work employs it to measure the distributional coverage of a learned model, \(p_\theta(x)\) in our case, since a model with a mode-collapsing issue results in a high RPPL. FPPL and RPPL are displayed in Table 2. Our model outperforms all the baselines on the two metrics, demonstrating the high fluency and diversity of the samples from our model. </p>
     <div class="figure">
         <img src="./figure/text/text_table.png" width="800" style="margin:10px">
     </div>
 
 
-    <h3>Experiment 3: Analysis of latent space</h3>
+    <h3>Experiment 3: Markov chain transition from standard prior to EBM prior on CUB</h3>
     <p> We examine the exponential tilting of the reference prior \(p_0(z)\) through Langevin samples initialized from \(p_0(z)\) with target distribution \(p_\alpha(z)\). As the reference distribution \(p_0(z)\) is in the form of an isotropic Gaussian, we expect the energy-based correction \(f_\alpha\) to tilt \(p_0\) into an irregular shape like some shallow local modes. Therefore, the trajectory of a Markov chain initialized from the reference distribution \(p_0(z)\) with well-learned target \(p_\alpha(z)\) should depict the transition towards synthesized examples of high quality while the energy fluctuates around some constant. Figure 2 depicts such transitions for CelebA, which is based on a model trained with \(K_0 = 40\) steps. The quality of synthesis improves significantly with increasing number of steps.
  </p>
     <div class="figure">
