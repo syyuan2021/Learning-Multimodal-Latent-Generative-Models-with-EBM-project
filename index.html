@@ -128,7 +128,7 @@
     <div class="figure">
         <img src="./fig/image/poly_base_joint.png" width="300" style="margin:10px">
         <img src="./fig/image/poly_joint_base_uni.png" width="300" style="margin:10px">
-        <p class="caption"><b>Figure 1:</b> Joint Generated samples for PolyMNIST (EBM prior: left; Laplacian prior: right).</p>
+        <p class="caption"><b>Figure 2:</b> Joint Generated samples for PolyMNIST (EBM prior: left; Laplacian prior: right).</p>
     </div>
 
     <div class="figure">
@@ -140,7 +140,7 @@
     <div class="figure">
         <img src="./fig/image/poly_generliazed_joint.png" width="300" style="margin:10px">
         <img src="./fig/image/poly_joint_iclr23.png" width="300" style="margin:10px">
-        <p class="caption"><b>Figure 1:</b> Joint Generated samples for PolyMNIST (EBM prior: left; Laplacian prior: right).</p>
+        <p class="caption"><b>Figure 3:</b> Joint Generated samples for PolyMNIST (EBM prior: left; Laplacian prior: right).</p>
     </div>
     
     <div class="figure">
@@ -149,11 +149,11 @@
 
 
     <h3>Experiment 3: Markov chain transition from standard prior to EBM prior on CUB</h3>
-    <p> We examine the exponential tilting of the reference prior \(p_0(z)\) through Langevin samples initialized from \(p_0(z)\) with target distribution \(p_\alpha(z)\). As the reference distribution \(p_0(z)\) is in the form of an Laplacian, we expect the energy-based correction \(f_\alpha\) to tilt \(p_0\) into an irregular shape like some shallow local modes. Therefore, the trajectory of a Markov chain initialized from the reference distribution \(p_0(z)\) with well-learned target \(p_\alpha(z)\) should depict the transition towards more coherent information between image and caption. Figure 2 depicts such transitions for CUB, which is based on a model trained with \(K_0 = X\) steps. The quality of synthesis improves significantly with increasing number of steps.
+    <p> We examine the exponential tilting of the reference prior \(p_0(z)\) through Langevin samples initialized from \(p_0(z)\) with target distribution \(p_\alpha(z)\). As the reference distribution \(p_0(z)\) is in the form of an Laplacian, we expect the energy-based correction \(f_\alpha\) to tilt \(p_0\) into an irregular shape like some shallow local modes. Therefore, the trajectory of a Markov chain initialized from the reference distribution \(p_0(z)\) with well-learned target \(p_\alpha(z)\) should depict the transition towards more coherent information between image and caption. Figure 4 depicts such transitions for CUB, which is based on a model trained with \(K_0 = X\) steps. The quality of synthesis improves significantly with increasing number of steps.
  </p>
     <div class="figure">
         <img src="./fig/image/cub_mcmc.png" width="800" style="margin:10px">
-        <p class="caption"><b>Figure 2:</b> Transition of Markov chains initialized from \(p_0(z)\) towards \(\tilde{p}_{\alpha}(z)\) for \(K_0'=X\) steps.</p>
+        <p class="caption"><b>Figure 4:</b> Transition of Markov chains initialized from \(p_0(z)\) towards \(\tilde{p}_{\alpha}(z)\) for \(K_0'=X\) steps.</p>
     </div>
 
 
