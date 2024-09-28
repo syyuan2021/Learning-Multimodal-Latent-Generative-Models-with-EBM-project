@@ -149,20 +149,6 @@
     </div>
 
 
-    <h3>Experiment 4: Anomaly detection</h3>
-    <p> If the generator and EBM are well learned, then the posterior \(p_\theta(z|x)\) would form a discriminative latent space that has separated probability densities for normal and anomalous data. Samples from such latent space can then be used as discriminative features to detect anomalies. We perform posterior sampling on the learned model to obtain the latent samples, and use the unnormalized log-posterior \(\log p_\theta(x, z)\) as our decision function. </p>
-    <div class="figure">
-        <img src="./figure/anomaly/anomaly_table.png" width="800" style="margin:10px">
-    </div>
-
-
-    <h3>Experiment 5: Scalability</h3>
-    <p> We have also explored avenues to improve training speed and found that a PyTorch extension, NVIDIA Apex, is able to improve our model training 2.5 times. We test our method with Apex training on a larger scale dataset, CelebA \( (128 \times 128 \times 3) \). The learned model is able to synthesize examples with high fidelity. </p>
-    <div class="figure">
-        <img src="./figure/image/celeba_large/celeba128_synthesis.png" width="600" style="margin:10px">
-    </div>
-
-
     <hr>
     <h2>Acknowledgements</h2>
     <p>This work is supported in part by NSF IIS-2339604. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the NSF.</p>
