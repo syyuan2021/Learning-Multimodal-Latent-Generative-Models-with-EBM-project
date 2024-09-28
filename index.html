@@ -64,10 +64,14 @@
 <div class="content">
     <div id="abs">
         <h1>Learning Multimodal Latent Generative Models with Energy-Based Prior</h1>
-        <div class="authors"><a href="mailto:syuan14@stevens.edu">Shiyu Yuan</a>,  Jiali Cui,  Hanao Li, Tian Han</div>
+        <div class="authors">
+            <a href="mailto:syuan14@stevens.edu">Shiyu Yuan</a> (Department of Systems Engineering),  
+            Jiali Cui, Hanao Li, Tian Han (Department of Computer Science)
+        </div>
         <div class="inst">
             Stevens Institute of Technology, USA<br>
         </div>
+
         <h2>Abstract</h2>
         <p>Multimodal models have gained increasing popularity recently. Many works have been proposed to learn the representations for different modalities. The representation can learn shared information from these domains, leading to increased and coherent joint and cross-generation. However, these works mainly considered standard Gaussian or Laplacian as their prior distribution. It can be challenging for the uni-modal and non-informative distribution to capture all the information from multiple data types. Meanwhile, energy-based models (EBM) have shown their effectiveness in multiple tasks due to their expressiveness and flexibility. But its capacity has yet to be discovered for the multimodal generative models. In this paper, we propose a novel framework to train multimodal latent generative models together with the energy-based models. The proposed method can lead to more expressive and informative prior which can better capture the information within multiple modalities. Our experiments showed that our model is effective and can increase generation coherence and latent classification for different multimodal datasets.</p>
     </div>
@@ -138,6 +142,7 @@
         <img src="./fig/image/poly_joint_iclr23.png" width="300" style="margin:10px">
         <p class="caption"><b>Figure 1:</b> Joint Generated samples for PolyMNIST (EBM prior: left; Laplacian prior: right).</p>
     </div>
+    
     <div class="figure">
         <img src="./fig/coherence/poly_generalize.png" width="400" style="margin:10px">
     </div>
