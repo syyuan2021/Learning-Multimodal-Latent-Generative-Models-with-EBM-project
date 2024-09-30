@@ -95,8 +95,8 @@
     <hr>
 
     <h2>Settings</h2>
-    <p>1. Base version: <br>
-       2. Generalized version: </p>
+    <p>1. Base version: EBM prior.<br>
+       2. Generalized version: EBM prior with modality specific prior. </p>
     <hr>
     
 
@@ -149,17 +149,15 @@
 
 
     <h3>Experiment 3: Markov chain transition from standard prior to EBM prior on CUB</h3>
-    <p> We examine the exponential tilting of the reference prior \(p_0(z)\) through Langevin samples initialized from \(p_0(z)\) with target distribution \(p_\alpha(z)\). As the reference distribution \(p_0(z)\) is in the form of an Laplacian, we expect the energy-based correction \(f_\alpha\) to tilt \(p_0\) into an irregular shape like some shallow local modes. Therefore, the trajectory of a Markov chain initialized from the reference distribution \(p_0(z)\) with well-learned target \(p_\alpha(z)\) should depict the transition towards more coherent information between image and caption. Figure 4 depicts such transitions for CUB. The quality of synthesis improves significantly with increasing number of steps.
+    <p> We examine the exponential tilting of the reference prior \(p_0(z)\) through Langevin samples initialized from \(p_0(z)\) with target distribution \(p_\alpha(z)\). As the reference distribution \(p_0(z)\) is in the form of an Laplacian, we expect the energy-based correction \(f_\alpha\) to tilt \(p_0\) into an irregular shape like some shallow local modes. Therefore, the trajectory of a Markov chain initialized from the reference distribution \(p_0(z)\) with well-learned target \(p_\alpha(z)\) should depict the transition towards more coherent information between image and caption. Figure 4 depicts such transitions for CUB, which is based on a model trained with 50 steps. The quality of synthesis improves significantly with increasing number of steps.
  </p>
     <div class="figure">
         <img src="./fig/image/cub_mcmc.png" width="800" style="margin:10px">
-        <p class="caption"><b>Figure 4:</b> Transition of Markov chains initialized from \(p_0(z)\) towards \(\tilde{p}_{\alpha}(z)\).</p>
+        <p class="caption"><b>Figure 4:</b> Transition of Markov chains initialized from \(p_0(z)\) towards \(\tilde{p}_{\alpha}(z)\) for langevin steps with 50.</p>
     </div>
 
 
-    <hr>
-    <h2>Acknowledgements</h2>
-    <p>TThis work is supported in part by NSF IIS-2339604. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the NSF.</p>
+   
 </div>
 </body>
 </html>
